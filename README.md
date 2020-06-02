@@ -1,7 +1,7 @@
 # :clipboard: Peystbin
 A Text Storage Site.
 
-[Bugs](https://github.com/DanonekTM/Peystbin/issues)
+[Bugs](https://github.com/DanonekTM/Peystbin/issues) - [Demo](https://paste.danonek.dev/)
 
 ## Features
 * Clean URL's.
