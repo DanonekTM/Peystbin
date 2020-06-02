@@ -1,0 +1,1 @@
+$(function(){topbar.config({autoRun:!0,barThickness:3,barColors:{0:"#232BEB",".25":"#232BEB",".50":"#232BEB",".75":"#232BEB","1.0":"#232BEB"},shadowBlur:10,shadowColor:"rgba(0,0,0,0.6)",className:"topbar"}),topbar.show(),$(document).ready(function(){topbar.hide()})});

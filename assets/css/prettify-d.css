@@ -1,0 +1,138 @@
+/* Tomorrow Theme */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+.pln {
+  color: #a4b1aa;
+}
+
+@media screen {
+  .str {
+    color: #718c00;
+  }
+
+  .kwd {
+    color: #b97ce1;
+  }
+
+  .com {
+    color: #8e908c;
+  }
+
+  .typ {
+    color: #72a1dd;
+  }
+
+  .lit {
+    color: #f5871f;
+  }
+
+  .pun {
+    color: #a4b1aa;
+  }
+
+  .opn {
+    color: #a4b1aa;
+  }
+
+  .clo {
+    color: #a4b1aa;
+  }
+
+  .tag {
+    color: #c82829;
+  }
+
+  .atn {
+    color: #f5871f;
+  }
+
+  .atv {
+    color: #3e999f;
+  }
+
+  .dec {
+    color: #f5871f;
+  }
+
+  .var {
+    color: #c82829;
+  }
+
+  .fun {
+    color: #4271ae;
+  }
+}
+@media print, projection {
+  .str {
+    color: #006600;
+  }
+
+  .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+
+  .com {
+    color: #600;
+    font-style: italic;
+  }
+
+  .typ {
+    color: #404;
+    font-weight: bold;
+  }
+
+  .lit {
+    color: #004444;
+  }
+
+  .pun, .opn, .clo {
+    color: #444400;
+  }
+
+  .tag {
+    color: #006;
+    font-weight: bold;
+  }
+
+  .atn {
+    color: #440044;
+  }
+
+  .atv {
+    color: #006600;
+  }
+}
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.75rem;
+}
+
+/* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+    color: gray;
+}
+
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  /* */
+}
+
+.wrap {
+    white-space: pre-wrap;
+}
