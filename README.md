@@ -26,6 +26,8 @@ A Text Storage Site.
 
 ## Third Party Software
 * [jQuery](https://jquery.com/ "jQuery")
+* [Prettify JS](https://github.com/googlearchive/code-prettify "Prettify JS")
+* [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme "Tomorrow Theme")
 * [PHP Mailer](https://github.com/PHPMailer/PHPMailer "PHP Mailer")
 * [SendGrid Email API](https://sendgrid.com/solutions/email-api/ "SendGrid Email API")
 * [Kappella Bootstrap Admin Template](https://github.com/BootstrapDash/Kapella-Free-Bootstrap-Admin-Template "Kappella Bootstrap Admin Template")
