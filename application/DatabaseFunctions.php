@@ -101,6 +101,28 @@ class DatabaseFunctions
 		mysqli_close($this->db_connection);
 	}
 	
+	public function getAllLoginHistory()
+	{
+		$this->db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+		if (!$this->db_connection->connect_error)
+		{
+			$query = $this->db_connection->prepare("SELECT * FROM logins;");
+			$query->execute();
+		
+			$resultSet = $query->get_result();
+			
+			return $resultSet;
+		}
+		else
+		{
+			header('HTTP/1.1 503 Service Unavailable.', true, 503);
+			echo 'Database connection problem.';
+			exit(1);
+		}
+		mysqli_close($this->db_connection);
+	}
+	
 	public function getLoginHistoryByPage($start, $limit)
 	{
 		$this->db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -127,7 +149,7 @@ class DatabaseFunctions
 	
 	public function getDaysLoggedIn()
 	{
-		$logins = $this->getLoginHistory();
+		$logins = $this->getAllLoginHistory();
 		
 		if ($logins)
 		{
