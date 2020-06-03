@@ -54,7 +54,7 @@ class DatabaseFunctions
 		}
 		elseif ($timestamp == -2)
 		{
-			return 'One reading remaining';
+			return 'Your eyes only';
 		}
 
 		$format = function($t, $s)
@@ -917,6 +917,8 @@ class DatabaseFunctions
 				$query->bind_param('ssiiiss', $uniqid, $paste_title, $deletion_date, $highlighting, $wrap, $content, $added);
 				$query->execute();
 			}
+			
+			$_SESSION['just_created'] = true;
 
 			if ($this->rewrite_on)
 			{
@@ -938,7 +940,7 @@ class DatabaseFunctions
 		mysqli_close($this->db);
 	}
 	
-	function show_paste($param)
+	function show_paste($param, $just_created)
 	{
 		$id = str_replace("@raw", "", $param);
 		$is_raw = intval(strtolower(substr($param, -4)) == "@raw");
@@ -973,7 +975,7 @@ class DatabaseFunctions
 						$fail = true;
 					}
 				}
-				elseif ($result['deletion_date'] == -2)
+				elseif ($result['deletion_date'] == -2 && !$just_created)
 				{
 					$query = $this->db->prepare("UPDATE pastes set deletion_date = 0 WHERE paste_id = ?;");
 					$query->bind_param('s', $id);

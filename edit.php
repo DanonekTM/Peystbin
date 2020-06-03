@@ -94,7 +94,7 @@ if ($Login->isUserLoggedIn())
 		if ($url)
 		{
 			$paste_id = $ConfigTools->sanitizeRequest($url);
-			$paste_info = $DatabaseFunctions->show_paste($paste_id);
+			$paste_info = $DatabaseFunctions->show_paste($paste_id, false);
 			if (!$paste_info)
 			{
 				include("pages/error.php");
@@ -117,7 +117,7 @@ if ($Login->isUserLoggedIn())
 		if (isset($_GET['p']))
 		{	
 			$paste_id = $ConfigTools->sanitizeRequest($_GET['p']);
-			$paste_info = $DatabaseFunctions->show_paste($paste_id);
+			$paste_info = $DatabaseFunctions->show_paste($paste_id, false);
 			if (!$paste_info)
 			{
 				include("pages/error.php");

@@ -77,7 +77,7 @@ if ($Login->isUserLoggedIn())
 		{
 			$paste_id = $ConfigTools->sanitizeRequest($url);
 			$DatabaseFunctions->incrementPasteViews($paste_id, $DatabaseFunctions->getUserIP());
-			$paste_info = $DatabaseFunctions->show_paste($paste_id);
+			$paste_info = $DatabaseFunctions->show_paste($paste_id, false);
 
 			include("pages/view.php");
 			return;
@@ -94,8 +94,17 @@ if ($Login->isUserLoggedIn())
 		{
 			$paste_id = $ConfigTools->sanitizeRequest($_GET['p']);
 			$DatabaseFunctions->incrementPasteViews($paste_id, $DatabaseFunctions->getUserIP());
-			$paste_info = $DatabaseFunctions->show_paste($paste_id);
-
+			
+			if (isset($_SESSION['just_created']) && $_SESSION['just_created'] == true)
+			{
+				$paste_info = $DatabaseFunctions->show_paste($paste_id, true);
+			}
+			else
+			{
+				$paste_info = $DatabaseFunctions->show_paste($paste_id, false);
+			}
+			
+			unset($_SESSION['just_created']);
 			include("pages/view.php");
 			return;
 		}
@@ -112,8 +121,17 @@ else
 	{
 		$paste_id = $ConfigTools->sanitizeRequest($_GET['p']);
 		$DatabaseFunctions->incrementPasteViews($paste_id, $DatabaseFunctions->getUserIP());
-		$paste_info = $DatabaseFunctions->show_paste($paste_id);
 		
+		if (isset($_SESSION['just_created']) && $_SESSION['just_created'] == true)
+		{
+			$paste_info = $DatabaseFunctions->show_paste($paste_id, true);
+		}
+		else
+		{
+			$paste_info = $DatabaseFunctions->show_paste($paste_id, false);
+		}
+		
+		unset($_SESSION['just_created']);
 		include("pages/view.php");
 		return;
 	}
