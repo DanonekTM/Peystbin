@@ -336,7 +336,7 @@ class DatabaseFunctions
 
 		if (!$this->db_connection->connect_error)
 		{
-			$query = $this->db_connection->prepare("SELECT * FROM pastes WHERE is_private != 1 AND deletion_date != 0 ORDER BY entry_id DESC LIMIT 30;");
+			$query = $this->db_connection->prepare("SELECT * FROM pastes WHERE is_private != 1 AND deletion_date != 0 AND deletion_date != -2 ORDER BY entry_id DESC LIMIT 30;");
 			$query->execute();
 		
 			$resultSet = $query->get_result();
