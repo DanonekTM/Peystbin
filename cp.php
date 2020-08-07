@@ -134,7 +134,6 @@ if ($Login->isUserLoggedIn())
 			{
 				header('Location: /info.php');
 			}
-			$ConfigTools->resetSession();
 		}
 		die();
 	}
