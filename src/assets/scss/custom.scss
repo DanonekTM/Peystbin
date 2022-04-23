@@ -1,0 +1,70 @@
+$primaryAccent: #6366f1;
+
+/*
+Custom Scrollbar
+======================
+*/
+
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color: $primaryAccent;
+}
+
+/*
+Remove scrollbar width
+======================
+*/
+html 
+{
+	overflow-y: scroll;
+}
+
+:root 
+{
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+:root body 
+{
+	position: absolute;
+}
+
+body 
+{
+	width: 100vw;
+	overflow: hidden;
+}
+
+.pre-bg 
+{
+	background-color: #23272a;
+}
+
+.svg-white
+{
+	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+.fade-enter-active, .fade-leave-active 
+{
+	transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to 
+{
+	opacity: 0;
+}

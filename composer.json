@@ -1,0 +1,25 @@
+{
+    "name": "danonek/peystbin",
+    "version": "0.1.0",
+    "authors": [
+        {
+            "name": "Danonek",
+            "email": "damian@danonek.dev",
+            "homepage": "https://danonek.dev/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Danonek\\": [
+                "backend\\kernel"
+            ]
+        },
+        "classmap": [
+            "backend\\kernel"
+        ]
+    },
+    "require": {
+        "firebase/php-jwt": "^5.2",
+        "phpmailer/phpmailer": "^6.3"
+    }
+}
