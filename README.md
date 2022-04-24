@@ -20,7 +20,11 @@ npm run build
 ### Run server
 ```
 mv move_to_dist/* ./dist
+```
+```
 cd dist
+```
+```
 php -S localhost:80
 ```
 
