@@ -5,6 +5,14 @@ A Text Storage Site.
   <img src="peystbin.png" alt="Screenshot of Peystbin landing page." />
 </p>
 
+## Project requirements
+
+* PHP 7.4+
+* MySQL
+* Redis
+* NGINX
+* Node
+
 ## Project setup
 ```
 npm install
